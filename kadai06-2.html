@@ -12,26 +12,26 @@
 </head>
 <body>
     <h1>座席の予約</h1>
-    <div id="1">
-        <p>東京会場<h3>（予約受付中）</h3></p>
+    <div id="before">
+        <p>東京会場<span><strong>（予約受付中）</strong></span></p>
         <button onclick="reservation();">予約する</button>
     </div>
 
-    <div id="2">
-        <p>東京会場<h3>（予約済み）</h3></p>
+    <div id="after">
+        <p>東京会場<span><strong>（予約済み）</strong></span></p>
         <p><strong>ありがとうございました</strong></p>
     </div>
 
 
     <script>
         window.onload=function(){
-            document.getElementById('1').style.display = 'block';
-            document.getElementById('2').style.display = 'none';
+            document.getElementById('before').style.display = 'block';
+            document.getElementById('after').style.display = 'none';
         }
         
         function reservation(){
-            document.getElementById('1').style.display = 'none';
-            document.getElementById('2').style.display = 'block';
+            document.getElementById('before').style.display = 'none';
+            document.getElementById('after').style.display = 'block';
         }
     </script>
 </body>
