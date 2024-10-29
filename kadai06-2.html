@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>要素の取得と内容の変更</title>
     <style>
-        h3{
+        span{
             color: red;
+            font-weight: bold;;
         }
     </style>
 </head>
 <body>
     <h1>座席の予約</h1>
     <div id="before">
-        <p>東京会場<span><strong>（予約受付中）</strong></span></p>
+        <p>東京会場<span>（予約受付中）</span></p>
         <button onclick="reservation();">予約する</button>
     </div>
 
     <div id="after">
-        <p>東京会場<span><strong>（予約済み）</strong></span></p>
+        <p>東京会場<span>（予約済み）</span></p>
         <p><strong>ありがとうございました</strong></p>
     </div>
 
