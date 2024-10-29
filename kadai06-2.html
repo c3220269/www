@@ -12,25 +12,27 @@
     </style>
 </head>
 <body>
-    <h1>座席の予約</h1>
+    <h1>座席の予約</h1><p>東京会場<span id="span"></span></p>
     <div id="before">
-        <p>東京会場<span>（予約受付中）</span></p>
+        
         <button onclick="reservation();">予約する</button>
     </div>
 
     <div id="after">
-        <p>東京会場<span>（予約済み）</span></p>
+        <!-- <p>東京会場<span>（予約済み）</span></p> -->
         <p><strong>ありがとうございました</strong></p>
     </div>
 
 
     <script>
         window.onload=function(){
+            document.getElementById('span').innerHTML = '予約受付中';
             document.getElementById('before').style.display = 'block';
             document.getElementById('after').style.display = 'none';
         }
         
         function reservation(){
+            document.getElementById('span').innerHTML = '予約済み';
             document.getElementById('before').style.display = 'none';
             document.getElementById('after').style.display = 'block';
         }
