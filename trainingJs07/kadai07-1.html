@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>人口の多い国ランキング</h1>
-    <ol>
-        <li>中国</li>
+    <ol id="ranking">
+        <li>中国<img src="img/flag_CHN.png"></li>
         <li>インド</li>
         <li>アメリカ</li>
         <li>インドネシア</li>
@@ -16,14 +16,10 @@
     <button onclick="changeImg();">国旗で表示</button>
 
     <script>
-        let img = ['<img src="img/flag_CHN.png">'];
-        let list = document.querySelectorAll('li');
+        let img = [''];
+        let list = document.querySelectorAll('#ranking li');
         function changeImg() {
-            list[0].textContent = img[0];
-            list[1].textContent = img[1];
-            list[2].textContent = img[2];
-            list[3].textContent = img[3];
-
+            
         }
     </script>
 </body>
