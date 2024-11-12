@@ -10,7 +10,7 @@
         }
         td, th{
             border: solid 1px #000;
-            width: 40px;
+            width: 100px;
             padding: 5px;
             text-align: center;
         }
@@ -29,6 +29,7 @@
     <script>
         const priceClass = ['大人', '高校生', '中学生', '小学生'];
         const price = [800, 680, 450, 380];
+        const lowCount = 5;
         function createTable() {
             let row = '<tr><th></th>';
             for(let j = 0; j < priceClass.length; j++){
@@ -37,7 +38,7 @@
             row = row + '</tr>';
             document.getElementById('t_head').insertAdjacentHTML('beforeend', row);
 
-            for(let i = 1; i <= 5; i++){
+            for(let i = 1; i <= lowCount; i++){
                 let row = '<tr><th>' + i + '人</th>';
                 for(let j = 0; j < price.length; j++){
                     row = row + '<td>' + i*price[j] + '円</td>';
