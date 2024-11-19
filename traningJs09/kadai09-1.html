@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>条件分岐</title>
+</head>
+<body>
+    <h3>問題</h3>
+    <p>もっとも面積が大きい「県」は何県でしょう？</p>
+    <button id="sendHint_button" onclick="Msg()">ヒントを見る</button> 
+    <p id="sendHint"></p>
+
+    <script>
+        const clickCount = 0;
+        function Msg() {
+            clickCount++;
+            switch(clickCount) {
+                case 1:
+                    document.getElementById('sendHint').innerHTML = '（注意）北海道は「県」ではありません。';
+                    break;
+                case 2:
+                    document.getElementById('sendHint').innerHTML = '東北地方にあります。';
+                    document.getElementById('sendHint_button').innerHTML = '答えを見る';
+                    break;
+                default:
+                    document.getElementById('sendHint').innerHTML = '答えは「岩手県」です。';
+            }
+        }
+    </script>
+</body>
+</html>
