@@ -20,14 +20,14 @@
     <button onclick="check(3)">x = 3</button>
     <button onclick="check(4)">x = 4</button>
     <button onclick="check(5)">x = 5</button>
-    <div id="anser" class="big_font"></div>
+    <div id="message" class="big_font"></div>
 
     <script>
         function check(x) {
             if (x == 2 || x == 4) {
-                document.getElementById('anser').textContent = '正解！';
+                document.getElementById('message').textContent = '正解！';
             } else {
-                document.getElementById('anser').textContent = '間違い！';
+                document.getElementById('message').textContent = '間違い！';
             }
         }
     </script>
