@@ -46,9 +46,10 @@
             for (let i = 0; i < anser.length; i++) {
                 text += anser[i];
                 if (i != anser.length-1) {
-                    text += ", ";
+                    text += "、";
                     continue;
                 }
+                text += "が解です。";
                 document.getElementById('message').textContent = text;
             }
             
