@@ -23,17 +23,15 @@
         function show() {
             let anser = [];
             let count = 0;
-            let x = 0;
+            let x = 1;
 
             while (x < 100) {
-                console.log(x);
                 let a = Math.pow(x, 3);
                 let b = 53;
                 b *= Math.pow(x, 2);
                 let c = 620*x;
-                console.log(a + "," + b + "," +c);
-                console.log(a-b+c);
                 if (a-b+c == 1036) {
+                    consloe.log(x);
                     anser.push(x);
                     count++;
                     if (count >= 3){
@@ -50,8 +48,7 @@
                     text += "、";
                     continue;
                 }
-                text += "が解です。";
-                document.getElementById('message').textContent = text;
+                document.getElementById('message').textContent = text + "が解です。";
             }
             
         }
