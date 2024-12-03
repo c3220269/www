@@ -25,9 +25,12 @@
             let count = 0;
 
             for (let x = 0; x < 10000; x++) {
-                console.log((x**3)-((53*x)**2)+(620*x)-1036);
-                if ((x**3)-((53*x)**2)+(620*x)-1036 == 0) {
-                    
+                let a = x**3;
+                let b = 53*x;
+                b = b**2;
+                let c = 620*x;
+                if (a-b+c == 1036) {
+                    console.log(x);
                     anser.push(x);
                     if (count <= 3) {
                         break;
