@@ -24,8 +24,9 @@
             let anser = [];
             let count = 0;
 
-            for (let x = 0; x < 100; x++) {
+            for (let x = 0; x < 10000; x++) {
                 if (x**3-(53*x)**2+620*x-1036 == 0) {
+                    console.log(x);
                     anser.push(x);
                     if (count <= 3) {
                         break;
