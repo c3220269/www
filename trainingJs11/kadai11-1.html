@@ -24,7 +24,8 @@
             let anser = [];
             let count = 0;
 
-            for (let x = 0; x < 100; x++) {
+            for (let x = 1; x < 100; x++) {
+                console.log(x);
                 let a = Math.pow(x, 3);
                 let b = 53;
                 b = Math.pow(x, 2);
@@ -32,7 +33,7 @@
                 console.log(a + "," + b + "," +c);
                 console.log(a-b+c);
                 if (a-b+c == 1036) {
-                    console.log(x);
+
                     anser.push(x);
                     if (count <= 3) {
                         break;
