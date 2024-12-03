@@ -34,10 +34,12 @@
                 console.log(a-b+c);
                 if (a-b+c == 1036) {
                     anser.push(x);
+                    count++;
+                    if (count >= 3) {
+                        break;
+                    }
                 }
-                if (count >= 3) {
-                    break;
-                }
+
             }
 
             let text = "";

@@ -35,13 +35,14 @@
                 console.log(a-b+c);
                 if (a-b+c == 1036) {
                     anser.push(x);
-                }
-                if (count >= 3) {
-                    break;
+                    count++;
+                    if (count >= 3){
+                        break;
+                    }
                 }
                 x++;
             }
-            
+
             let text = "";
             for (let i = 0; i < anser.length; i++) {
                 text += anser[i];
