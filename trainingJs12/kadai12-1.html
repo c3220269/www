@@ -22,16 +22,9 @@
 
     <script>
         function anser() {
-            // for(let i = 10; i < 10000; i++) {
-            //     if (check(i) == true) {
-            //         document.getElementById('message').textContent = '答えは' + i + 'です。';
-            //         break;
-            //     }
-            // }
-
             let i = 10;
             while (check(i) == false) {
-                i++
+                i++;
             }
             document.getElementById('message').textContent = '答えは' + i + 'です。';
         }
