@@ -23,7 +23,7 @@
     <script>
         function anser() {
             let i = 10;
-            while (check(i) == false) {
+            while (check(i) != true) {
                 i++;
             }
             document.getElementById('message').textContent = '答えは' + i + 'です。';
