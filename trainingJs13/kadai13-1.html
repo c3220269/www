@@ -29,20 +29,24 @@
                 alert('正しい範囲で半角数字を入力してください');
                 return;
             }
-
+            
+            
             for (let i = max; i < 1000; i++) {
+                var flag = true;
                 for (let x = min; x <= max; x++) {
                     console.log(i + ',' + x);
                     if (i%x != 0) {
+                        flag = false
                         break;
                     }
-                    ans = i;
-                    document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + ans + 'です。';
-                    return;
+                }
+                if (flag) {
+                    document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + i + 'です。';
+                    break;
                 }
             }
             alert('over');
-
+            
         }
     </script>
 </body>
