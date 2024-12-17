@@ -32,7 +32,7 @@
             
             let i = max;
             var flag = false;
-            while (flag) {
+            do {
                 flag = true;
                 for (let x = min; x <= max; x++) {
                     console.log(i + ',' + x);
@@ -43,7 +43,7 @@
                 }
                 ans = i;
                 i++;
-            }
+            } while (flag);
             document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + ans + 'です。';
 
             // for (let i = max; i < 1000; i++) {
