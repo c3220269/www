@@ -25,7 +25,7 @@
             let min = parseInt(prompt('範囲の最小値を1~10で入力してください', 1));
             let max = parseInt(prompt('範囲の最大値を1~10で入力してください', 10));
             let ans = 0;
-            if (!(min >= 1 && min <= 10 && min%2 == 0 && max >= 1 && max <= 10 && max%2 == 0 && min < max)) {
+            if (min < 1 || min > 10 || min%1 != 0 || max < 1 || max > 10 || max%1 != 0 || min > max) {
                 alert('正しい範囲で半角数字を入力してください');
                 return;
             }
@@ -40,6 +40,7 @@
                     return;
                 }
             }
+            alert('over');
 
         }
     </script>
