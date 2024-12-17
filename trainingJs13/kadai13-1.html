@@ -17,7 +17,7 @@
     <h1>n~mで割り切れる数字</h1>
     <p>1~10の好きな範囲で<br>
     割り切れる最小の数値をJavaScriptで求めます。</p>
-    <button onclick="anser">範囲を指定</button>
+    <button onclick="anser()">範囲を指定</button>
     <div id="message">ここに結果が表示されます。</div>
 
     <script>
@@ -29,7 +29,7 @@
                 alert('正しい範囲で半角数字を入力してください');
                 return;
             }
-            
+
 
 
             document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + ans + 'です。';
