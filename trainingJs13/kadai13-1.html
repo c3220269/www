@@ -32,12 +32,15 @@
 
             for (let i = max; i < 1000; i++) {
                 for (let x = min; x <= max; x++) {
-
+                    if (i%x != 0) {
+                        break;
+                    }
+                    ans = i;
+                    document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + ans + 'です。';
+                    return;
                 }
             }
 
-
-            document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + ans + 'です。';
         }
     </script>
 </body>
