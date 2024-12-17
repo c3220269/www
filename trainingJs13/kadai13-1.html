@@ -30,24 +30,9 @@
                 return;
             }
             
-            let i = max;
-            var flag = false;
-            while (flag) {
-                flag = true;
-                for (let x = min; x <= max; x++) {
-                    console.log(i + ',' + x);
-                    if (i%x != 0) {
-                        flag = false;
-                        break;
-                    }
-                }
-                ans = i;
-                i++;
-            };
-            document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + ans + 'です。';
-
-            // for (let i = max; i < 1000; i++) {
-            //     var flag = true;
+            // let i = max;
+            // var flag = false;
+            // while (flag) {
             //     for (let x = min; x <= max; x++) {
             //         console.log(i + ',' + x);
             //         if (i%x != 0) {
@@ -55,11 +40,25 @@
             //             break;
             //         }
             //     }
-            //     if (flag) {
-            //         document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + i + 'です。';
-            //         break;
-            //     }
-            // }
+            //     ans = i;
+            //     i++;
+            // };
+            // document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + ans + 'です。';
+
+            for (let i = max; i < 100000; i++) {
+                var flag = true;
+                for (let x = min; x <= max; x++) {
+                    console.log(i + ',' + x);
+                    if (i%x != 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    document.getElementById('message').textContent = min + '~' + max + 'で割り切れる最小の数値は' + i + 'です。';
+                    break;
+                }
+            }
         }
     </script>
 </body>
